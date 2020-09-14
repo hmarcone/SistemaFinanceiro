@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Cadastrar Cliente";
+}
+@section scripts{
+    <script>
+        var urlPost = '@Url.Action("Incluir", "Cliente", new { area = "" })';
+        var urlGet  = '@Url.Action("FindCpfBeneficiario", "Beneficiario", new { area = "" })';
+    </script>
+    @Scripts.Render("~/bundles/clientes")
+    @Scripts.Render("~/Scripts/jquery.mask.js")
+}
+<h2>@Html.Raw(ViewBag.Title)</h2>
+<script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.11.0.js"></script>
+
+@Html.Partial("Forms")
